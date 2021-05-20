@@ -38,7 +38,6 @@ public class App {
             public void run() {
                 long a = System.currentTimeMillis();
                 for (int i = 0; i < arr.length; i++) {
-                    arr[i] = 1;
                     arr[i] = (float)(arr[i] * Math.sin(0.2f + i / 5) * Math.cos(0.2f + i / 5) * Math.cos(0.4f + i / 2));
                 }
                 System.out.println(System.currentTimeMillis() - a + " первый массив");
@@ -75,7 +74,6 @@ public class App {
             public void run() {
                 System.arraycopy(arr, h, a2, 0, h);
                 for (int i = 0; i < a2.length; i++) {
-                    a2[i] = 1;
                     a2[i] = (float)(a2[i] * Math.sin(0.2f + i / 5) * Math.cos(0.2f + i / 5) * Math.cos(0.4f + i / 2));
                 }
                 System.arraycopy(a2, 0, arr, h, h);
